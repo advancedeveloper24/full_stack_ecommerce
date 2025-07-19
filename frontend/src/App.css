@@ -104,7 +104,7 @@ body {
 
 .header .part3 .circle svg {
   font-size: 20px;
-  color: #717cd4;
+  color: #707071;
 }
 
 .cartTab button {
@@ -128,4 +128,113 @@ body {
   display: flex;
   width: 25px;
   height: 25px;
+}
+
+nav .allCatTab {
+  background: #2b86cc;
+  padding: 8px 20px !important;
+  border-radius: 30px !important;
+}
+
+nav .allCatTab {
+  color: #fff1ee;
+}
+
+nav .allCatTab:hover {
+  background: #135385;
+}
+
+nav .allCatTab .icon1 svg {
+  font-size: 20px !important;
+  margin-right: 5px;
+}
+nav .allCatTab .icon2 svg {
+  font-size: 15px !important;
+  margin-left: 15px;
+}
+
+nav .navPart1 {
+  max-width: 20%;
+  flex: 0 0 20%;
+}
+nav .navPart2 {
+  max-width: 80%;
+  flex: 0 0 80%;
+}
+
+nav .navPar2 ul {
+  margin-bottom: 0px;
+}
+nav .navPart2 ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  align-items: center !important;
+  padding: 8px 15px;
+  border-radius: 30px;
+  display: flex !important;
+  align-items: center !important;
+  transition: all 0.2s ease-in-out;
+}
+nav .navPart2 ul li a:hover {
+  background: #c4e2ee;
+  color: rgb(41, 135, 194);
+}
+
+.locationModal .MuiPaper-elevation {
+  padding: 10px 20px;
+}
+
+.locationModal .MuiPaper-elevation .headerSearch {
+  height: 50px;
+  background: #f3f4f7;
+  padding: 10px;
+  position: relative;
+  border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.locationModal .MuiPaper-elevation .headerSearch input {
+  background: transparent !important;
+  outline: none !important;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+
+  border: 0px !important;
+  padding: 0px 20px !important;
+}
+
+.locationModal .MuiPaper-elevation .headerSearch button {
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  min-width: 40px !important;
+  height: 60px !important;
+  z-index: 100;
+  color: black;
+}
+
+.locationModal .MuiPaper-elevation .headerSearch button svg {
+  font-size: 25px;
+}
+
+.locationModal .countryList {
+  margin-bottom: 0px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.locationModal .countryList li {
+  width: 100%;
+  list-style: none;
+}
+.locationModal .countryList li button {
+  width: 100%;
+  text-transform: capitalize !important;
+  color: black !important;
+  justify-content: flex-start !important;
+  padding: 15px 20px;
 }

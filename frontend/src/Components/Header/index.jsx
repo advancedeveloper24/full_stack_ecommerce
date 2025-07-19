@@ -2,10 +2,11 @@ import React from "react";
 import Logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import CountryDropdown from "../CountryDropdown";
-import { IoSearchCircle } from "react-icons/io5";
+import Navigation from "./Navigation/Navigation";
 import Button from "@mui/material/Button";
 import { FaUser } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa6";
+import SearchBox from "./SearchBox";
 
 const Header = () => {
   return (
@@ -31,14 +32,8 @@ const Header = () => {
               <div className="col-sm-10 d-flex align-items-center part2">
                 <CountryDropdown />
 
-                {/* Header Search Start */}
-                <div className="headerSearch m-3">
-                  <input type="text" placeholder="Search for products..." />
-                  <Button>
-                    <IoSearchCircle />
-                  </Button>
-                </div>
-                {/* Header Search End */}
+                <SearchBox />
+
                 <div className="part3 d-flex align-items-center mx-auto">
                   <Button className="circle m-3">
                     <FaUser />
@@ -59,6 +54,8 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+        <Navigation />
       </div>
     </>
   );
