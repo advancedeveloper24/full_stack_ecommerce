@@ -15,9 +15,10 @@ const CountryDropdown = () => {
 
   const context = useContext(MyContext);
 
-  const selectCountry = (index) => {
+  const selectCountry = (index, country) => {
     setselectedTab(index);
     setIsModalOpen(false);
+    context.setselectedCountry(country);
   };
 
   useEffect(() => {
@@ -27,7 +28,14 @@ const CountryDropdown = () => {
   const filterList = (e) => {
     const keyword = e.target.value.toLowerCase();
 
-    const list = [];
+    if (keyword !== "") {
+      const list = countryList.filter((item) => {
+        return item.country.toLowerCase().includes(keyword);
+      });
+      setcountryList(list);
+    } else {
+      setcountryList(context.countryList);
+    }
   };
 
   return (
@@ -35,7 +43,11 @@ const CountryDropdown = () => {
       <Button className="countryDrop" onClick={() => setIsModalOpen(true)}>
         <div className="info d-flex flex-column">
           <span className="label"> Your Location </span>
-          <span className="name"> United States </span>
+          <span className="name">
+            {context.selectCountry !== ""
+              ? context.selectCountry
+              : "Select Location "}
+          </span>
         </div>
         <span className="ml-auto">
           <IoIosArrowDropdownCircle />
@@ -49,21 +61,25 @@ const CountryDropdown = () => {
           <IoCloseSharp />
         </Button>
         <div className="headerSearch">
-          <input type="text" placeholder="Search your area..." />
+          <input
+            type="text"
+            placeholder="Search your area..."
+            onChange={filterList}
+          />
           <Button>
             <IoSearchCircle />
           </Button>
         </div>
 
         <ul className="countryList">
-          {context.countryList?.length !== 0 &&
-            context.countryList?.map((item, index) => {
+          {countryList?.length !== 0 &&
+            countryList?.map((item, index) => {
               return (
                 <li
                   className={` ${selectedTab === index ? "active" : ""} `}
                   key={index}
                 >
-                  <Button onClick={() => selectCountry(index)}>
+                  <Button onClick={() => selectCountry(index, item.country)}>
                     {item.country}
                   </Button>
                 </li>

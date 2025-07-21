@@ -57,6 +57,10 @@ body {
   opacity: 0.8;
 }
 
+.headerWrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
 .header .headerSearch {
   width: 60%;
   height: 80px;
