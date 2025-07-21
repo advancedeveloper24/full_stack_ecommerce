@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactElement, use, useCallback, useContext } from "react";
 import Logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import CountryDropdown from "../CountryDropdown";
@@ -7,8 +7,11 @@ import Button from "@mui/material/Button";
 import { FaUser } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa6";
 import SearchBox from "./SearchBox";
+import { MyContext } from "../../App";
 
 const Header = () => {
+  const context = useContext(MyContext);
+
   return (
     <>
       <div className="headerWrapper">
@@ -30,7 +33,7 @@ const Header = () => {
                 </Link>
               </div>
               <div className="col-sm-10 d-flex align-items-center part2">
-                <CountryDropdown />
+                {context.countryList.length !== 0 && <CountryDropdown />}
 
                 <SearchBox />
 

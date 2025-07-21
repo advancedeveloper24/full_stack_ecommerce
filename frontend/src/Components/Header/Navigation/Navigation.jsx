@@ -27,33 +27,38 @@ const Navigation = () => {
             <ul className="list list-inline w-100 ">
               <li className="list-inline-item">
                 <Link to="/">
-                  <FaHome />
-                  <span>Home</span>
+                  <Button>Home</Button>
                 </Link>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
-                  <GiClothes />
-                  <span>Fashion</span>
+                  <Button>Fashion</Button>
                 </Link>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
-                  <MdOutlineElectricalServices />
-                  <span>Electronics</span>
+                  <Button>Electronics</Button>
                 </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Bakery</Link>
+                <Link to="/">
+                  <Button>Bakery</Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Grocery</Link>
+                <Link to="/">
+                  <Button>Grocery</Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Blog</Link>
+                <Link to="/">
+                  <Button>Blog</Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Contact Us</Link>
+                <Link to="/">
+                  <Button>Contact Us</Button>
+                </Link>
               </li>
             </ul>
           </div>
